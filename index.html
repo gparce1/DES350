@@ -2,9 +2,457 @@
 <html>
 <head>
 	<title>DES350 : Digital Media Design IV</title>
+	<style>
+		html {
+		  box-sizing: border-box;
+		}
+		*, *:before, *:after {
+		  box-sizing: inherit;
+		}
+		body {
+			font-family: Roboto, 'Helvetica Neue', Helvetica , sans-serif;
+			max-width: 980px;
+			margin: 50px auto;
+			color: #555;
+		}
+		h1, h2 {
+			color: #000;
+		}
+		header {
+			margin-bottom: 50px;
+		}
+		section {
+			border-top: 1px dotted #ddd;
+			margin-bottom: 50px;
+		}
+		.student-list,
+		.resource-list,
+		.schedule-list {
+			list-style: none;
+			padding-left: 0;
+		}
+		.student,
+		.resource-item {
+			position: relative;
+			height: 50px;
+			padding: 5px 0 5px 60px;
+			margin-bottom: 20px;
+		}
+		.student-icon,
+		.resource-icon {
+			position: absolute;
+			display: block;
+			top: 0;
+			left: 0;
+			height: 50px;
+			width: 50px;
+			background-color: #ddd;
+		}
+		.student-name {
+			font-weight: normal;
+		}
+		.student-github {
+			display: block;
+			margin-top: 5px;
+			font-size: 0.825rem;
+		}
+		.resource-item {
+			padding-top: 15px;
+		}
+		.schedule-day:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		.day-list {
+			margin-top: 5px;
+			padding-left: 15px;
+			font-size: 0.825rem;
+		}
+	</style>
 </head>
 <body>
-	<h1>DES350 : Digital Media Design IV</h1>
-	<p>Introduction to web development from a design approach.</p>
+	<header>
+		<h1>DES350 : Digital Media Design IV</h1>
+		<p>Advanced interactive design with emphasis on web-based applications.</p>
+		<p>Fall 2019, Mondays &amp; Wednesdays, 9:00am to 11:40am</p>
+		<p>Instructor: <a href="https://github.com/gparce1" target="_blank">Gene Parcellano</a></p>
+	</header>
+	<main>
+		<section>
+			<h2>Students</h2>
+			<ul class="student-list">
+				<li class="student">
+					<span class="student-icon"><img src="https://github.com/nabourashed.png?size=50" height="50" width="50" /></span>
+					<strong class="student-name">Nada Abourashed</strong>
+					<a class="student-github" href="https://github.com/nabourashed" target="_blank">https://github.com/nabourashed</a>
+				</li>
+				<li class="student">
+					<span class="student-icon"><img src="https://github.com/katiebewley.png?size=50" height="50" width="50" /></span>
+					<strong class="student-name">Katie Bewley</strong>
+					<a class="student-github" href="https://github.com/katiebewley" target="_blank">https://github.com/katiebewley</a>
+				</li>
+				<li class="student">
+					<span class="student-icon"><img src="https://github.com/MJ-Gonzalez.png?size=50" height="50" width="50" /></span>
+					<strong class="student-name">Monica Gonzalez</strong>
+					<a class="student-github" href="https://github.com/MJ-Gonzalez" target="_blank">https://github.com/MJ-Gonzalez</a>
+				</li>
+				<li class="student">
+					<span class="student-icon"><img src="https://github.com/jguan24.png?size=50" height="50" width="50" /></span>
+					<strong class="student-name">Elaine Guan</strong>
+					<a class="student-github" href="https://github.com/jguan24" target="_blank">https://github.com/jguan24</a>
+				</li>
+				<li class="student">
+					<span class="student-icon"><img src="https://github.com/njacob23.png?size=50" height="50" width="50" /></span>
+					<strong class="student-name">Natalie Jacobi</strong>
+					<a class="student-github" href="https://github.com/njacob23" target="_blank">https://github.com/njacob23</a>
+				</li>
+				<li class="student">
+					<span class="student-icon"><img src="https://github.com/Samorie.png?size=50" height="50" width="50" /></span>
+					<strong class="student-name">Samantha Lien</strong>
+					<a class="student-github" href="https://github.com/Samorie" target="_blank">https://github.com/Samorie</a>
+				</li>
+				<li class="student">
+					<span class="student-icon"><img src="https://github.com/amodmahadik.png?size=50" height="50" width="50" /></span>
+					<strong class="student-name">Amod Mahadik</strong>
+					<a class="student-github" href="https://github.com/amodmahadik" target="_blank">https://github.com/amodmahadik</a>
+				</li>
+				<li class="student">
+					<span class="student-icon"><img src="https://github.com/denissemarin.png?size=50" height="50" width="50" /></span>
+					<strong class="student-name">Denisse Marin</strong>
+					<a class="student-github" href="https://github.com/denissemarin" target="_blank">https://github.com/denissemarin</a>
+				</li>
+				<li class="student">
+					<span class="student-icon"><img src="https://github.com/KilahMcCline.png?size=50" height="50" width="50" /></span>
+					<strong class="student-name">Kilah McCline</strong>
+					<a class="student-github" href="https://github.com/KilahMcCline" target="_blank">https://github.com/KilahMcCline</a>
+				</li>
+				<li class="student">
+					<span class="student-icon"><img src="https://github.com/jminer3.png?size=50" height="50" width="50" /></span>
+					<strong class="student-name">Justin Miner</strong>
+					<a class="student-github" href="https://github.com/jminer3" target="_blank">https://github.com/jminer3</a>
+				</li>
+				<li class="student">
+					<span class="student-icon"><img src="https://github.com/nhanamrafee.png?size=50" height="50" width="50" /></span>
+					<strong class="student-name">Hana Mohammed Rafee</strong>
+					<a class="student-github" href="https://github.com/nhanamrafee" target="_blank">https://github.com/nhanamrafee</a>
+				</li>
+				<li class="student">
+					<span class="student-icon"><img src="https://github.com/jmonta28.png?size=50" height="50" width="50" /></span>
+					<strong class="student-name">Jenea Montanez</strong>
+					<a class="student-github" href="https://github.com/jmonta28" target="_blank">https://github.com/jmonta28</a>
+				</li>
+				<li class="student">
+					<span class="student-icon"><img src="https://github.com/isspacheco.png?size=50" height="50" width="50" /></span>
+					<strong class="student-name">Jonathan Pacheco</strong>
+					<a class="student-github" href="https://github.com/isspacheco" target="_blank">https://github.com/isspacheco</a>
+				</li>
+				<li class="student">
+					<span class="student-icon"><img src="https://github.com/enriquepadillas.png?size=50" height="50" width="50" /></span>
+					<strong class="student-name">Enrique Padilla</strong>
+					<a class="student-github" href="https://github.com/enriquepadillas" target="_blank">https://github.com/enriquepadillas</a>
+				</li>
+				<li class="student">
+					<span class="student-icon"><img src="https://github.com/ypessoa.png?size=50" height="50" width="50" /></span>
+					<strong class="student-name">Yasmin Pessoa</strong>
+					<a class="student-github" href="https://github.com/ypessoa" target="_blank">https://github.com/ypessoa</a>
+				</li>
+				<li class="student">
+					<span class="student-icon"><img src="https://github.com/aranda4.png?size=50" height="50" width="50" /></span>
+					<strong class="student-name">Anthony Randazzo</strong>
+					<a class="student-github" href="https://github.com/aranda4" target="_blank">https://github.com/aranda4</a>
+				</li>
+				<li class="student">
+					<span class="student-icon"><img src="https://github.com/mrawls2.png?size=50" height="50" width="50" /></span>
+					<strong class="student-name">Michelle Rawls</strong>
+					<a class="student-github" href="https://github.com/mrawls2" target="_blank">https://github.com/mrawls2</a>
+				</li>
+				<li class="student">
+					<span class="student-icon"><img src="https://github.com/lreyes36.png?size=50" height="50" width="50" /></span>
+					<strong class="student-name">Luis Reyes</strong>
+					<a class="student-github" href="https://github.com/lreyes36" target="_blank">https://github.com/lreyes36</a>
+				</li>
+				<li class="student">
+					<span class="student-icon"><img src="https://github.com/krumas2.png?size=50" height="50" width="50" /></span>
+					<strong class="student-name">Katherine Rumas</strong>
+					<a class="student-github" href="https://github.com/krumas2" target="_blank">https://github.com/krumas2</a>
+				</li class="student">
+				<li class="student">
+					<span class="student-icon"><img src="https://github.com/mturci2.png?size=50" height="50" width="50" /></span>
+					<strong class="student-name">Michelle Turcios</strong>
+					<a class="student-github" href="https://github.com/mturci2" target="_blank">https://github.com/mturci2</a>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>Schedule</h2>
+			<ul class="schedule-list">
+				<li class="schedule-item">
+					<h3 class="schedule-month">August</h3>
+					<ul class="schedule-day-list">
+						<li class="schedule-day">
+							<strong class="day-number">26</strong>
+							<span class="day-name">Mon</span>
+							<ol class="day-list">
+								<li>Introduction</li>
+								<li><a href="https://uofi.box.com/s/rxsxhko97xhvc01oi2tqe2bmgdx6gsh9" target="_blank">Syllabus</a></li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">28</strong>
+							<span class="day-name">Wed</span>
+							<ol class="day-list">
+								<li><a href="https://uofi.box.com/s/n9x82m3sjx14zlpmfc70t5j6koi54km0" target="_blank">Slides</a></li>
+								<li><a href="https://uofi.box.com/s/ysqm906aa62byncqe2jwlzpuvtmk13h6" target="_blank">Wireframe Template</a></li>
+							</ol>
+						</li>
+					</ul>
+				</li>
+				<li class="schedule-item">
+					<h3 class="schedule-month">September</h3>
+					<ul class="schedule-day-list">
+						<li class="schedule-day">
+							<strong class="day-number">02</strong>
+							<span class="day-name">Mon</span>
+							<ol class="day-list">
+								<li>Labor Day - No Class</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">04</strong>
+							<span class="day-name">Wed</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">09</strong>
+							<span class="day-name">Mon</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">11</strong>
+							<span class="day-name">Wed</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">16</strong>
+							<span class="day-name">Mon</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">18</strong>
+							<span class="day-name">Wed</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">23</strong>
+							<span class="day-name">Mon</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">25</strong>
+							<span class="day-name">Wed</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">30</strong>
+							<span class="day-name">Mon</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+					</ul>
+				</li>
+				<li class="schedule-item">
+					<h3 class="schedule-month">October</h3>
+					<ul class="schedule-day-list">
+						<li class="schedule-day">
+							<strong class="day-number">02</strong>
+							<span class="day-name">Wed</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">07</strong>
+							<span class="day-name">Mon</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">09</strong>
+							<span class="day-name">Wed</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">14</strong>
+							<span class="day-name">Mon</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">16</strong>
+							<span class="day-name">Wed</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">21</strong>
+							<span class="day-name">Mon (Midterm)</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">23</strong>
+							<span class="day-name">Wed</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">28</strong>
+							<span class="day-name">Mon</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">30</strong>
+							<span class="day-name">Wed</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+					</ul>
+				</li>
+				<li class="schedule-item">
+					<h3 class="schedule-month">November</h3>
+					<ul class="schedule-day-list">
+						<li class="schedule-day">
+							<strong class="day-number">04</strong>
+							<span class="day-name">Mon</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">06</strong>
+							<span class="day-name">Wed</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">11</strong>
+							<span class="day-name">Mon</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">13</strong>
+							<span class="day-name">Wed</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">18</strong>
+							<span class="day-name">Mon</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">20</strong>
+							<span class="day-name">Wed</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">25</strong>
+							<span class="day-name">Mon</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">27</strong>
+							<span class="day-name">Wed</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+					</ul>
+				</li>
+				<li class="schedule-item">
+					<h3 class="schedule-month">December</h3>
+					<ul class="schedule-day-list">
+						<li class="schedule-day">
+							<strong class="day-number">02</strong>
+							<span class="day-name">Mon</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+						<li class="schedule-day">
+							<strong class="day-number">04</strong>
+							<span class="day-name">Wed</span>
+							<ol class="day-list">
+								<li>TBD</li>
+							</ol>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>Resources</h2>
+			<ul class="resource-list">
+				<li class="resource-item">
+					<span class="resource-icon"></span>
+					<a href="http://www.github.com/" target="_blank">Github</a>
+				</li>
+				<li class="resource-item">
+					<span class="resource-icon"></span>
+					<a href="http://desktop.github.com/" target="_blank">Github Client</a>
+				</li>
+				<li class="resource-item">
+					<span class="resource-icon"></span>
+					<a href="http://www.atom.io/" target="_blank">Atom</a>
+				</li>
+				<li class="resource-item">
+					<span class="resource-icon"></span>
+					<a href="https://vuejs.org/" target="_blank">Vue.js</a>
+				</li>
+				<li class="resource-item">
+					<span class="resource-icon"></span>
+					<a href="https://firebase.google.com/" target="_blank">Firebase</a>
+				</li>
+				<li class="resource-item">
+					<span class="resource-icon"></span>
+					<a href="https://www.heroku.com/home" target="_blank">Heroku</a>
+				</li>
+			</ul>
+		</section>
+	</main>
 </body>
 </html>
