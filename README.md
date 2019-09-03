@@ -5,7 +5,9 @@ Fall 2019
 
 9:00am to 11:40am, Mondays & Wednesdays
 
-Instructor: Gene Parcellano
+Instructor: [Gene Parcellano](https://github.com/gparce1)
+
+Homepage: https://gparce1.github.io/DES350/
 
 ---
 ## To Run
