@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>DES350 : Digital Media Design IV</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style>
 		html {
 		  box-sizing: border-box;
@@ -27,7 +28,8 @@
 		}
 		.student-list,
 		.resource-list,
-		.schedule-list {
+		.schedule-list,
+		.schedule-day-list {
 			list-style: none;
 			padding-left: 0;
 		}
@@ -48,24 +50,54 @@
 			width: 50px;
 			background-color: #ddd;
 		}
+
+		/* Student List */
+		.student-list {
+			column-count: 2;
+			column-gap: 20px;
+		}
+		.student {
+			-webkit-column-break-inside: avoid;
+			-webkit-backface-visibility: hidden;
+		}
 		.student-name {
 			font-weight: normal;
 		}
-		.student-github {
+		.student-links {
 			display: block;
-			margin-top: 5px;
-			font-size: 0.825rem;
+			font-size: 1.375em;
 		}
 		.resource-item {
 			padding-top: 15px;
 		}
+
+		/* Schedule List */
 		.schedule-day:not(:last-child) {
-			margin-bottom: 10px;
+			margin-bottom: 20px;
+		}
+		.schedule-day-list {
+			padding-left: 10px;
+		}
+		.schedule-list {
+			display: flex;
+		}
+		.schedule-item {
+			flex-basis: 20%;
+		}
+		.schedule-item:not(:last-child) {
+			margin-right: 10px;
+		}
+		.schedule-month {
+			background-color: #eee;
+			padding: 5px 10px;
 		}
 		.day-list {
 			margin-top: 5px;
 			padding-left: 15px;
 			font-size: 0.825rem;
+		}
+		.day-list li {
+			margin-bottom: 5px;
 		}
 	</style>
 </head>
@@ -83,101 +115,145 @@
 				<li class="student">
 					<span class="student-icon"><img src="https://github.com/nabourashed.png?size=50" height="50" width="50" /></span>
 					<strong class="student-name">Nada Abourashed</strong>
-					<a class="student-github" href="https://github.com/nabourashed" target="_blank">https://github.com/nabourashed</a>
+					<span class="student-links">
+						<a class="student-homepage" href="https://nabourashed.github.io/DES-350/" target="_blank" title="Homepage"><span class="fa fa-home"></span></a>
+						<a class="student-github" href="https://github.com/nabourashed" target="_blank" title="Github"><span class="fa fa-github"></span></a>
+					</span>
 				</li>
 				<li class="student">
 					<span class="student-icon"><img src="https://github.com/katiebewley.png?size=50" height="50" width="50" /></span>
 					<strong class="student-name">Katie Bewley</strong>
-					<a class="student-github" href="https://github.com/katiebewley" target="_blank">https://github.com/katiebewley</a>
+					<span class="student-links">
+						<a class="student-github" href="https://github.com/katiebewley" target="_blank"><span class="fa fa-github"></span></a>
+					</span>
 				</li>
 				<li class="student">
 					<span class="student-icon"><img src="https://github.com/MJ-Gonzalez.png?size=50" height="50" width="50" /></span>
 					<strong class="student-name">Monica Gonzalez</strong>
-					<a class="student-github" href="https://github.com/MJ-Gonzalez" target="_blank">https://github.com/MJ-Gonzalez</a>
+					<span class="student-links">
+						<a class="student-github" href="https://github.com/MJ-Gonzalez" target="_blank"><span class="fa fa-github"></span></a>
+					</span>
 				</li>
 				<li class="student">
 					<span class="student-icon"><img src="https://github.com/jguan24.png?size=50" height="50" width="50" /></span>
 					<strong class="student-name">Elaine Guan</strong>
-					<a class="student-github" href="https://jguan24.github.io/DES350/" target="_blank">Homepage: https://jguan24.github.io/DES350/</a>
-					<a class="student-github" href="https://github.com/jguan24" target="_blank">Github: https://github.com/jguan24</a>
+					<span class="student-links">
+						<a class="student-homepage" href="https://jguan24.github.io/DES350/" target="_blank"><span class="fa fa-home"></span></a>
+						<a class="student-github" href="https://github.com/jguan24" target="_blank"><span class="fa fa-github"></span></a>
+					</span>
 				</li>
 				<li class="student">
 					<span class="student-icon"><img src="https://github.com/njacob23.png?size=50" height="50" width="50" /></span>
 					<strong class="student-name">Natalie Jacobi</strong>
-					<a class="student-github" href="https://njacob23.github.io/DES350/" target="_blank">Homepage: https://njacob23.github.io/DES350/</a>
-					<a class="student-github" href="https://github.com/njacob23" target="_blank">Github: https://github.com/njacob23</a>
+					<span class="student-links">
+						<a class="student-homepage" href="https://njacob23.github.io/DES350/" target="_blank"><span class="fa fa-home"></span></a>
+						<a class="student-github" href="https://github.com/njacob23" target="_blank"><span class="fa fa-github"></span></a>
+					</span>
 				</li>
 				<li class="student">
 					<span class="student-icon"><img src="https://github.com/amodmahadik.png?size=50" height="50" width="50" /></span>
 					<strong class="student-name">Amod Mahadik</strong>
-					<a class="student-github" href="https://github.com/amodmahadik" target="_blank">https://github.com/amodmahadik</a>
+					<span class="student-links">
+						<a class="student-github" href="https://github.com/amodmahadik" target="_blank"><span class="fa fa-github"></span></a>
+					</span>
 				</li>
 				<li class="student">
 					<span class="student-icon"><img src="https://github.com/denissemarin.png?size=50" height="50" width="50" /></span>
 					<strong class="student-name">Denisse Marin</strong>
-					<a class="student-github" href="https://github.com/denissemarin" target="_blank">https://github.com/denissemarin</a>
+					<span class="student-links">
+						<a class="student-github" href="https://github.com/denissemarin" target="_blank"><span class="fa fa-github"></span></a>
+					</span>
 				</li>
 				<li class="student">
 					<span class="student-icon"><img src="https://github.com/KilahMcCline.png?size=50" height="50" width="50" /></span>
 					<strong class="student-name">Kilah McCline</strong>
-					<a class="student-github" href="https://github.com/KilahMcCline" target="_blank">https://github.com/KilahMcCline</a>
+					<span class="student-links">
+						<a class="student-github" href="https://github.com/KilahMcCline" target="_blank"><span class="fa fa-github"></span></a>
+					</span>
 				</li>
 				<li class="student">
 					<span class="student-icon"><img src="https://github.com/jminer3.png?size=50" height="50" width="50" /></span>
 					<strong class="student-name">Justin Miner</strong>
-					<a class="student-github" href="https://jminer3.github.io/DES350/" target="_blank">Homepage: https://jminer3.github.io/DES350/</a>
-					<a class="student-github" href="https://github.com/jminer3" target="_blank">Github: https://github.com/jminer3</a>
+					<span class="student-links">
+						<a class="student-homepage" href="https://jminer3.github.io/DES350/" target="_blank"><span class="fa fa-home"></span></a>
+						<a class="student-github" href="https://github.com/jminer3" target="_blank"><span class="fa fa-github"></span></a>
+					</span>
 				</li>
 				<li class="student">
-					<span class="student-icon"><img src="https://github.com/nhanamrafee.png?size=50" height="50" width="50" /></span>
+					<span class="student-icon">
+						<img src="https://github.com/nhanamrafee.png?size=50" height="50" width="50" />
+					</span>
 					<strong class="student-name">Hana Mohammed Rafee</strong>
-					<a class="student-github" href="https://github.com/nhanamrafee" target="_blank">https://github.com/nhanamrafee</a>
+					<span class="student-links">
+						<a class="student-github" href="https://github.com/nhanamrafee" target="_blank">
+							<span class="fa fa-github"></span>
+						</a>
+					</span>
 				</li>
 				<li class="student">
 					<span class="student-icon"><img src="https://github.com/jmonta28.png?size=50" height="50" width="50" /></span>
 					<strong class="student-name">Jenea Montanez</strong>
-					<a class="student-github" href="https://github.com/jmonta28" target="_blank">https://github.com/jmonta28</a>
+					<span class="student-links">
+						<a class="student-github" href="https://github.com/jmonta28" target="_blank"><span class="fa fa-github"></span></a>
+					</span>
 				</li>
 				<li class="student">
 					<span class="student-icon"><img src="https://github.com/isspacheco.png?size=50" height="50" width="50" /></span>
 					<strong class="student-name">Jonathan Pacheco</strong>
-					<a class="student-github" href="https://github.com/isspacheco" target="_blank">https://github.com/isspacheco</a>
+					<span class="student-links">
+						<a class="student-github" href="https://github.com/isspacheco" target="_blank"><span class="fa fa-github"></span></a>
+					</span>
 				</li>
 				<li class="student">
 					<span class="student-icon"><img src="https://github.com/enriquepadillas.png?size=50" height="50" width="50" /></span>
 					<strong class="student-name">Enrique Padilla</strong>
-					<a class="student-github" href="https://github.com/enriquepadillas" target="_blank">https://github.com/enriquepadillas</a>
+					<span class="student-links">
+						<a class="student-homepage" href="https://enriquepadillas.github.io/DES350/" target="_blank"><span class="fa fa-home"></span></a>
+						<a class="student-github" href="https://github.com/enriquepadillas" target="_blank"><span class="fa fa-github"></span></a>
+					</span>
 				</li>
 				<li class="student">
 					<span class="student-icon"><img src="https://github.com/ypessoa.png?size=50" height="50" width="50" /></span>
 					<strong class="student-name">Yasmin Pessoa</strong>
-					<a class="student-github" href="https://github.com/ypessoa" target="_blank">https://github.com/ypessoa</a>
+					<span class="student-links">
+						<a class="student-github" href="https://github.com/ypessoa" target="_blank"><span class="fa fa-github"></span></a>
+					</span>
 				</li>
 				<li class="student">
 					<span class="student-icon"><img src="https://github.com/aranda4.png?size=50" height="50" width="50" /></span>
 					<strong class="student-name">Anthony Randazzo</strong>
-					<a class="student-github" href="https://github.com/aranda4" target="_blank">https://github.com/aranda4</a>
+					<span class="student-links">
+						<a class="student-github" href="https://github.com/aranda4" target="_blank"><span class="fa fa-github"></span></a>
+					</span>
 				</li>
 				<li class="student">
 					<span class="student-icon"><img src="https://github.com/mrawls2.png?size=50" height="50" width="50" /></span>
 					<strong class="student-name">Michelle Rawls</strong>
-					<a class="student-github" href="https://github.com/mrawls2" target="_blank">https://github.com/mrawls2</a>
+					<span class="student-links">
+						<a class="student-github" href="https://github.com/mrawls2" target="_blank"><span class="fa fa-github"></span></a>
+					</span>
 				</li>
 				<li class="student">
 					<span class="student-icon"><img src="https://github.com/lreyes36.png?size=50" height="50" width="50" /></span>
 					<strong class="student-name">Luis Reyes</strong>
-					<a class="student-github" href="https://github.com/lreyes36" target="_blank">https://github.com/lreyes36</a>
+					<span class="student-links">
+						<a class="student-github" href="https://github.com/lreyes36" target="_blank"><span class="fa fa-github"></span></a>
+					</span>
 				</li>
 				<li class="student">
 					<span class="student-icon"><img src="https://github.com/krumas2.png?size=50" height="50" width="50" /></span>
 					<strong class="student-name">Katherine Rumas</strong>
-					<a class="student-github" href="https://krumas2.github.io/DES350/" target="_blank">Homepage: https://krumas2.github.io/DES350/</a>
-					<a class="student-github" href="https://github.com/krumas2" target="_blank">Github: https://github.com/krumas2</a>
+					<span class="student-links">
+						<a class="student-homepage" href="https://krumas2.github.io/DES350/" target="_blank"><span class="fa fa-home"></span></a>
+						<a class="student-github" href="https://github.com/krumas2" target="_blank"><span class="fa fa-github"></span></a>
+					</span>
 				</li class="student">
 				<li class="student">
 					<span class="student-icon"><img src="https://github.com/mturci2.png?size=50" height="50" width="50" /></span>
 					<strong class="student-name">Michelle Turcios</strong>
-					<a class="student-github" href="https://github.com/mturci2" target="_blank">https://github.com/mturci2</a>
+					<span class="student-links">
+						<a class="student-github" href="https://github.com/mturci2" target="_blank"><span class="fa fa-github"></span></a>
+					</span>
 				</li>
 			</ul>
 		</section>
@@ -219,7 +295,7 @@
 							<strong class="day-number">04</strong>
 							<span class="day-name">Wed</span>
 							<ol class="day-list">
-								<li>Assignment 1: Wireframes & HTML Due</li>
+								<li>Asgmt. 1 Due<br/>Wireframes & HTML</li>
 								<li><a href="https://uofi.box.com/s/2rl07sbn9uy3bocdgoq5smyputkg9g7y" target="_blank">Slides</a></li>
 							</ol>
 						</li>
@@ -227,21 +303,21 @@
 							<strong class="day-number">09</strong>
 							<span class="day-name">Mon</span>
 							<ol class="day-list">
-								<li>Assignment 2: Calculator Visual Design Due</li>
+								<li>Asgmt. 2 Due<br/>Calculator Visual Design</li>
 							</ol>
 						</li>
 						<li class="schedule-day">
 							<strong class="day-number">11</strong>
 							<span class="day-name">Wed</span>
 							<ol class="day-list">
-								<li>TBD</li>
+								<li>Lab</li>
 							</ol>
 						</li>
 						<li class="schedule-day">
 							<strong class="day-number">16</strong>
 							<span class="day-name">Mon</span>
 							<ol class="day-list">
-								<li>TBD</li>
+								<li>Asgmt. 3 Due<br/>Final Calculator Web Application</li>
 							</ol>
 						</li>
 						<li class="schedule-day">
