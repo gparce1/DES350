@@ -1,0 +1,95 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+	font-family: Roboto, 'Helvetica Neue', Helvetica , sans-serif;
+	max-width: 980px;
+	margin: 50px auto;
+	color: #555;
+}
+h1, h2 {
+	color: #000;
+}
+header {
+	margin-bottom: 50px;
+}
+section {
+	border-top: 1px dotted #ddd;
+	margin-bottom: 50px;
+}
+.student-list,
+.resource-list,
+.schedule-list,
+.schedule-day-list {
+	list-style: none;
+	padding-left: 0;
+}
+.student,
+.resource-item {
+	position: relative;
+	height: 50px;
+	padding: 5px 0 5px 60px;
+	margin-bottom: 20px;
+}
+.student-icon,
+.resource-icon {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	height: 50px;
+	width: 50px;
+	background-color: #ddd;
+}
+
+/* Student List */
+.student-list {
+	column-count: 2;
+	column-gap: 20px;
+}
+.student {
+	-webkit-column-break-inside: avoid;
+	-webkit-backface-visibility: hidden;
+}
+.student-name {
+	font-weight: normal;
+}
+.student-links {
+	display: block;
+	font-size: 1.375em;
+}
+.resource-item {
+	padding-top: 15px;
+}
+
+/* Schedule List */
+.schedule-day:not(:last-child) {
+	margin-bottom: 20px;
+}
+.schedule-day-list {
+	padding-left: 10px;
+}
+.schedule-list {
+	display: flex;
+}
+.schedule-item {
+	flex-basis: 20%;
+}
+.schedule-item:not(:last-child) {
+	margin-right: 10px;
+}
+.schedule-month {
+	background-color: #eee;
+	padding: 5px 10px;
+}
+.day-list {
+	margin-top: 5px;
+	padding-left: 15px;
+	font-size: 0.825rem;
+}
+.day-list li {
+	margin-bottom: 5px;
+}
