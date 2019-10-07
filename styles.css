@@ -1,24 +1,92 @@
 html {
   box-sizing: border-box;
 }
+* {
+	margin: 0;
+	padding: 0;
+}
 *, *:before, *:after {
   box-sizing: inherit;
 }
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
 body {
+	margin: 0;
 	font-family: Roboto, 'Helvetica Neue', Helvetica , sans-serif;
-	max-width: 980px;
-	margin: 50px auto;
-	color: #555;
+	color: #444a54;
 }
 h1, h2 {
 	color: #000;
 }
-header {
-	margin-bottom: 50px;
+a {
+	color: #8bc051;
 }
+.container {
+	margin: 20px;
+}
+@media (min-width: 980px) {
+	.container {
+		margin: 30px auto;
+		max-width: 1020px;
+	}
+}
+
+/*******************************************************************************
+Header
+*******************************************************************************/
+header {
+	margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+	header {
+		margin-bottom: 40px;
+	}
+}
+h1 {
+	margin-bottom: 10px;
+}
+header .class-description {
+	float: left;
+	margin-bottom: 20px;
+}
+header .class-description p {
+	line-height: 24px;
+}
+header .class-info {
+	font-size: 13px;
+	color: #888;
+}
+header .class-info p {
+	float: none;
+	clear: both;
+	margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+	header .class-info {
+		float: right;
+		text-align: right;
+	}
+}
+
+/*******************************************************************************
+Sections
+*******************************************************************************/
 section {
-	border-top: 1px dotted #ddd;
-	margin-bottom: 50px;
+	padding: 10px 0;
+}
+@media (min-width: 768px) {
+	section {
+		padding: 20px 0 50px;
+	}
+}
+.section-header {
+	margin-bottom: 30px;
 }
 .student-list,
 .resource-list,
@@ -27,34 +95,55 @@ section {
 	list-style: none;
 	padding-left: 0;
 }
-.student,
-.resource-item {
-	position: relative;
-	height: 50px;
-	padding: 5px 0 5px 60px;
-	margin-bottom: 20px;
-}
-.student-icon,
-.resource-icon {
-	position: absolute;
-	display: block;
-	top: 0;
-	left: 0;
-	height: 50px;
-	width: 50px;
-	background-color: #ddd;
-}
 
-/* Student List */
+/*******************************************************************************
+Student List
+*******************************************************************************/
+.students {
+	background-color: #f5f7fa;
+}
 .student-list {
 	column-count: 2;
 	column-gap: 20px;
 }
 .student {
+	margin-bottom: 10px;
+}
+.student a {
+	display: block;
+	position: relative;
+	height: 70px;
+	max-width: 300px;
+	padding-left: 70px;
+	margin-left: -10px;
+	text-decoration: none;
+	color: #555;
+	transition: background 0.25s ease;
 	-webkit-column-break-inside: avoid;
 	-webkit-backface-visibility: hidden;
 }
+.student a:hover {
+	border-radius: 4px;
+	background-color: #e9edf6;
+	box-shadow: 0 1px 5px #aad0e4;
+}
+.student a:active {
+	background-color: #bee1f6;
+}
+.student-icon {
+	position: absolute;
+	display: block;
+	top: 10px;
+	left: 10px;
+	height: 50px;
+	width: 50px;
+	background-color: #ddd;
+	border-radius: 50%;
+	overflow: hidden;
+}
 .student-name {
+	display: inline-block;
+	padding-top: 25px;
 	font-weight: normal;
 }
 .student-links {
@@ -62,17 +151,14 @@ section {
 	font-size: 1.375em;
 }
 
-/* Resource List */
-.resource-item {
-	padding-top: 15px;
-}
-
-/* Schedule List */
+/*******************************************************************************
+Schedule List
+*******************************************************************************/
+.schedule {}
 .schedule-day:not(:last-child) {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 .schedule-day-list {
-	padding-left: 10px;
 }
 .schedule-list {
 	display: flex;
@@ -80,12 +166,22 @@ section {
 .schedule-item {
 	flex-basis: 20%;
 }
+.schedule-item.active {
+	padding: 20px;
+	margin: -20px 0;
+	background-color: #fae7e2;
+}
 .schedule-item:not(:last-child) {
 	margin-right: 10px;
 }
 .schedule-month {
-	background-color: #eee;
-	padding: 5px 10px;
+	padding: 5px 0;
+}
+.past {
+	color: #666e79;
+}
+.due {
+	color: #ea583f;
 }
 .day-list {
 	margin-top: 5px;
@@ -94,4 +190,18 @@ section {
 }
 .day-list li {
 	margin-bottom: 5px;
+}
+
+/*******************************************************************************
+Resource List
+*******************************************************************************/
+.resources {
+	background-color: #f5f7fa;
+}
+.resource-item {
+	position: relative;
+	margin-bottom: 10px;
+}
+.resource-item a {
+	/*padding: 20px 10px;*/
 }
